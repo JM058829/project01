@@ -1,9 +1,12 @@
 <template>
-  <div>
-    <Navbar />
+  <div class="layout">
+    <header class="layout-header">
+      <Navbar />
+    </header>
+
     <BackgroundFX />
 
-    <main>
+    <main class="layout-main">
       <Hero data-scene="0" />
 
       <section id="services" class="container section" data-scene="1">
@@ -35,7 +38,9 @@
       </section>
     </main>
 
-    <Footer />
+    <footer class="layout-footer">
+      <Footer />
+    </footer>
   </div>
 </template>
 
