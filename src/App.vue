@@ -3,7 +3,7 @@
     <Navbar />
     <BackgroundFX />
 
-    <main>
+    <main class="layout-main">
       <Hero data-scene="0" />
 
       <section id="services" class="container section" data-scene="1">
