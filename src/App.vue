@@ -1,6 +1,9 @@
 <template>
-  <div>
-    <Navbar />
+  <div class="layout">
+    <header class="layout-header">
+      <Navbar />
+    </header>
+
     <BackgroundFX />
 
     <main class="layout-main">
@@ -35,7 +38,9 @@
       </section>
     </main>
 
-    <Footer />
+    <footer class="layout-footer">
+      <Footer />
+    </footer>
   </div>
 </template>
 
