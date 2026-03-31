@@ -1,29 +1,20 @@
-<<<<<<< HEAD
 import { useEffect, useState } from 'react'
 
 const navItems = [
   ['videos', 'Videos'],
   ['stream', 'Streaming'],
   ['music', 'Releases'],
-=======
-const navItems = [
-  ['videos', 'Videos'],
-  ['stream', 'Streaming'],
-  ['music', 'Music'],
->>>>>>> origin/main
   ['gallery', 'Gallery'],
   ['merch', 'Merch'],
 ]
 
-export default function Navbar() {
-<<<<<<< HEAD
+export default function Navbar({ sections }) {
   const [open, setOpen] = useState(false)
   const [active, setActive] = useState('top')
 
   useEffect(() => {
-    const sections = ['top', ...navItems.map(([id]) => id)]
-      .map((id) => document.getElementById(id))
-      .filter(Boolean)
+    const ids = ['top', ...(sections || navItems.map(([id]) => id))]
+    const sectionEls = ids.map((id) => document.getElementById(id)).filter(Boolean)
 
     const observer = new IntersectionObserver(
       (entries) => {
@@ -34,9 +25,9 @@ export default function Navbar() {
       { rootMargin: '-45% 0px -45% 0px', threshold: 0.01 },
     )
 
-    sections.forEach((sec) => observer.observe(sec))
+    sectionEls.forEach((sec) => observer.observe(sec))
     return () => observer.disconnect()
-  }, [])
+  }, [sections])
 
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-zinc-800/70 bg-carbon/75 backdrop-blur-xl">
@@ -63,25 +54,12 @@ export default function Navbar() {
                     : 'border border-transparent text-zinc-300 hover:border-zinc-700 hover:text-white'
                 }`}
               >
-=======
-  return (
-    <header className="fixed inset-x-0 top-0 z-40 border-b border-zinc-800/80 bg-carbon/75 backdrop-blur-md">
-      <nav className="mx-auto flex w-[min(1120px,94%)] items-center justify-between py-3">
-        <a href="#top" className="text-lg font-black tracking-[0.18em] text-amberglow">
-          EL DE LA SANTA
-        </a>
-        <ul className="hidden gap-5 text-sm font-semibold text-zinc-300 md:flex">
-          {navItems.map(([id, label]) => (
-            <li key={id}>
-              <a className="transition hover:text-white" href={`#${id}`}>
->>>>>>> origin/main
                 {label}
               </a>
             </li>
           ))}
         </ul>
       </nav>
-<<<<<<< HEAD
 
       {open && (
         <div className="border-t border-zinc-800 bg-zinc-950/95 px-4 pb-4 pt-3 md:hidden">
@@ -102,8 +80,6 @@ export default function Navbar() {
           </ul>
         </div>
       )}
-=======
->>>>>>> origin/main
     </header>
   )
 }
