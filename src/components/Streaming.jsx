@@ -1,13 +1,18 @@
+<<<<<<< HEAD
 const platforms = [
   { name: 'Spotify', hint: 'Follow for drops + playlists', glyph: '◉' },
   { name: 'Apple Music', hint: 'Curated essentials + exclusives', glyph: '◌' },
   { name: 'iTunes', hint: 'Buy the catalog and latest singles', glyph: '◎' },
   { name: 'YouTube', hint: 'Official videos and live sessions', glyph: '◈' },
 ]
+=======
+const platforms = ['Spotify', 'Apple Music', 'iTunes', 'YouTube']
+>>>>>>> origin/main
 
 export default function Streaming() {
   return (
     <section id="stream" className="section-shell reveal">
+<<<<<<< HEAD
       <p className="section-kicker">Streaming & Routing</p>
       <h2 className="section-title">Stream El De La Santa on all platforms</h2>
 
@@ -24,6 +29,19 @@ export default function Streaming() {
             <p className="mt-1 text-sm text-zinc-400">{platform.hint}</p>
             <p className="mt-5 text-xs uppercase tracking-[0.25em] text-zinc-500">Open Platform →</p>
           </a>
+=======
+      <h2 className="text-3xl font-black uppercase">Stream Everywhere</h2>
+      <p className="mt-2 text-zinc-400">Stream El De La Santa on all platforms.</p>
+      <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        {platforms.map((platform) => (
+          <button
+            key={platform}
+            className="glow-hover rounded-xl border border-zinc-700 bg-gradient-to-br from-zinc-900 to-zinc-950 p-5 text-left"
+          >
+            <p className="text-xs uppercase tracking-[0.28em] text-zinc-400">Platform</p>
+            <p className="mt-2 text-lg font-bold">{platform}</p>
+          </button>
+>>>>>>> origin/main
         ))}
       </div>
     </section>
