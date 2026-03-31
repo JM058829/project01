@@ -16,12 +16,14 @@ export default function Hero() {
           <p className="inline-flex rounded-full border border-zinc-600/70 bg-zinc-900/60 px-4 py-2 text-xs uppercase tracking-[0.28em] text-zinc-300">
             Original Corridos · Regional Mexican
           </p>
+
           <h1 className="text-5xl font-black uppercase leading-[0.95] text-zinc-100 sm:text-6xl lg:text-8xl">
             EL DE
             <span className="block bg-gradient-to-r from-zinc-200 via-amberglow to-zinc-100 bg-clip-text text-transparent">
               LA SANTA
             </span>
           </h1>
+
           <p className="max-w-2xl text-lg leading-relaxed text-zinc-300 md:text-2xl">
             Original Corridos. Real Stories. No Filter. A cinematic sound forged in street truth, northern
             grit, and luxury noir energy.
@@ -53,11 +55,13 @@ export default function Hero() {
           <p className="mt-3 text-sm leading-relaxed text-zinc-300">
             A dark brass anthem built for midnight drives, packed venues, and stories that hit harder live.
           </p>
+
           <div className="mt-7 grid grid-cols-2 gap-4 text-center">
             <div className="rounded-2xl border border-zinc-700 bg-black/35 px-3 py-4">
               <p className="text-2xl font-black text-amberglow">2.4M</p>
               <p className="text-xs uppercase tracking-[0.2em] text-zinc-400">Streams</p>
             </div>
+
             <div className="rounded-2xl border border-zinc-700 bg-black/35 px-3 py-4">
               <p className="text-2xl font-black text-neon">48K</p>
               <p className="text-xs uppercase tracking-[0.2em] text-zinc-400">New Fans</p>

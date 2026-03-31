@@ -12,7 +12,9 @@ export default function Merch() {
           <p className="section-kicker">Capsule Collection</p>
           <h2 className="section-title">Official Merch Drop</h2>
         </div>
-        <p className="max-w-sm text-sm text-zinc-400">Limited-run pieces inspired by tour visuals and signature lyrics.</p>
+        <p className="max-w-sm text-sm text-zinc-400">
+          Limited-run pieces inspired by tour visuals and signature lyrics.
+        </p>
       </div>
 
       <div className="mt-8 grid gap-6 md:grid-cols-3">

@@ -24,7 +24,10 @@ export default function Videos() {
           <p className="section-kicker">Featured Visuals</p>
           <h2 className="section-title">Music Video Showcase</h2>
         </div>
-        <a href="#" className="inline-flex rounded-full border border-zinc-700 px-5 py-2 text-xs uppercase tracking-[0.22em] text-zinc-300">
+        <a
+          href="#"
+          className="inline-flex rounded-full border border-zinc-700 px-5 py-2 text-xs uppercase tracking-[0.22em] text-zinc-300"
+        >
           View All Videos
         </a>
       </div>

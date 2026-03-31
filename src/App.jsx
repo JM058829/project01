@@ -10,6 +10,7 @@ import Footer from './components/Footer'
 import BackgroundFX from './components/BackgroundFX'
 
 const revealTargets = '.reveal'
+const sections = ['videos', 'stream', 'music', 'gallery', 'merch']
 
 export default function App() {
   const [loaded, setLoaded] = useState(false)
@@ -32,6 +33,7 @@ export default function App() {
     )
 
     document.querySelectorAll(revealTargets).forEach((el) => observer.observe(el))
+
     return () => observer.disconnect()
   }, [loaded])
 
@@ -45,7 +47,7 @@ export default function App() {
             <p className="text-xs uppercase tracking-[0.5em] text-zinc-500">Loading Artist World</p>
             <h1 className="mt-4 text-4xl font-black uppercase tracking-[0.22em] text-amberglow">El De La Santa</h1>
             <div className="mx-auto mt-6 h-[2px] w-36 overflow-hidden rounded-full bg-zinc-800">
-              <span className="loader-bar block h-full w-full origin-left bg-gradient-to-r from-crimson via-amberglow to-neon" />
+              <span className="loader-bar block h-full w-full origin-left bg-gradient-to-r from-crimson via-amberglow to-zinc-200" />
             </div>
           </div>
         </div>
@@ -56,7 +58,7 @@ export default function App() {
   return (
     <div className="relative overflow-x-clip bg-carbon text-zinc-100">
       <BackgroundFX />
-      <Navbar />
+      <Navbar sections={sections} />
       <Hero />
       <main className="relative z-10 space-y-32 pb-24 pt-8 md:space-y-36 md:pt-12">
         <Videos />

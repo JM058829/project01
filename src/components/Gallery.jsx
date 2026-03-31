@@ -32,7 +32,11 @@ export default function Gallery() {
             onClick={() => setActiveIndex(idx)}
             className="group mb-4 w-full overflow-hidden rounded-2xl border border-zinc-700/70 bg-zinc-900 text-left"
           >
-            <img src={image.src} alt={image.label} className="h-auto w-full object-cover transition duration-500 group-hover:scale-105" />
+            <img
+              src={image.src}
+              alt={image.label}
+              className="h-auto w-full object-cover transition duration-500 group-hover:scale-105"
+            />
             <p className="px-4 py-3 text-xs uppercase tracking-[0.2em] text-zinc-300">{image.label}</p>
           </button>
         ))}

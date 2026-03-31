@@ -8,14 +8,13 @@ const navItems = [
   ['merch', 'Merch'],
 ]
 
-export default function Navbar() {
+export default function Navbar({ sections }) {
   const [open, setOpen] = useState(false)
   const [active, setActive] = useState('top')
 
   useEffect(() => {
-    const sections = ['top', ...navItems.map(([id]) => id)]
-      .map((id) => document.getElementById(id))
-      .filter(Boolean)
+    const ids = ['top', ...(sections || navItems.map(([id]) => id))]
+    const sectionEls = ids.map((id) => document.getElementById(id)).filter(Boolean)
 
     const observer = new IntersectionObserver(
       (entries) => {
@@ -26,9 +25,9 @@ export default function Navbar() {
       { rootMargin: '-45% 0px -45% 0px', threshold: 0.01 },
     )
 
-    sections.forEach((sec) => observer.observe(sec))
+    sectionEls.forEach((sec) => observer.observe(sec))
     return () => observer.disconnect()
-  }, [])
+  }, [sections])
 
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-zinc-800/70 bg-carbon/75 backdrop-blur-xl">

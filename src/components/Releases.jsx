@@ -38,7 +38,9 @@ export default function Releases() {
               <div className="h-20 w-20 rounded-xl bg-gradient-to-br from-zinc-700 to-zinc-900" />
               <div className="flex-1">
                 <h4 className="text-lg font-bold">{release.title}</h4>
-                <p className="text-xs uppercase tracking-[0.22em] text-zinc-400">{release.year} · {release.note}</p>
+                <p className="text-xs uppercase tracking-[0.22em] text-zinc-400">
+                  {release.year} · {release.note}
+                </p>
               </div>
               <button className="rounded-full border border-zinc-600 px-4 py-2 text-[11px] uppercase tracking-[0.2em] text-zinc-200">
                 Play
